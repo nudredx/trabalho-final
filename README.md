@@ -40,14 +40,7 @@ Criar uma aplicação que permita **registrar, visualizar e gerenciar** as manut
 - **Backend em Java** – manipulação dos dados e implementação do CRUD  
 
 ---
-
-## 📁 **Estrutura do Projeto**
-
-/ui       → Telas desenvolvidas no FlutterFlow  
-/models   → Modelos das máquinas e manutenções  
-/services → Lógica de CRUD e integração com o backend  
-/docs     → Documentação complementar  
-
+  
 
 ---
 
