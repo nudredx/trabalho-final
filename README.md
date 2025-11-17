@@ -22,9 +22,9 @@ Interface Desenvolvida no FlutterFlow: telas intuitivas, responsivas e fáceis d
 
 FlutterFlow – criação visual das telas e lógica do app
 
-Flutter / Dart – base do aplicativo
+Dbeaver - criação do Banco de Dados
 
-Backend (a definir) – para armazenamento e manipulação dos dados (ex.: Firebase, Supabase, API própria)
+Backend/Java – para armazenamento e manipulação dos dados 
 
 📌 Estrutura do Projeto
 
