@@ -1,4 +1,4 @@
-ControleManutencaoMaquinasFabLab
+Controle das maquinas do FabLab
 
 Este projeto tem como objetivo desenvolver um sistema simples e eficiente para o controle de manutenção das máquinas do FabLab, utilizando FlutterFlow para criação das telas e integração do aplicativo com um backend para operações de CRUD (Create, Read, Update, Delete).
 
