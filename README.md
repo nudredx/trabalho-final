@@ -1,50 +1,71 @@
-Controle das maquinas do FabLab
+# ⭐ **Controle das Máquinas do FabLab**
 
-Este projeto tem como objetivo desenvolver um sistema simples e eficiente para o controle de manutenção das máquinas do FabLab, utilizando FlutterFlow para criação das telas e integração do aplicativo com um backend para operações de CRUD (Create, Read, Update, Delete).
+Este projeto tem como objetivo desenvolver um sistema simples e eficiente para o **controle de manutenção das máquinas do FabLab**, utilizando **FlutterFlow** para criação das telas e integração com um backend em **Java** para operações de **CRUD (Create, Read, Update, Delete)**.
 
-🚀 Objetivo do Projeto
+---
 
-Criar uma aplicação que permita registrar, visualizar e gerenciar as manutenções realizadas nas máquinas do FabLab, garantindo organização, rastreabilidade e fácil acesso às informações.
+## 🚀 **Objetivo do Projeto**
 
-🛠️ Funcionalidades Principais
+Criar uma aplicação que permita **registrar, visualizar e gerenciar** as manutenções realizadas nas máquinas do FabLab, garantindo:
 
-Cadastro de Máquinas: inclusão de nome, categoria, número de série e outras informações relevantes.
+- Organização  
+- Rastreabilidade  
+- Facilidade de acesso às informações  
 
-Registro de Manutenção: anotações sobre manutenção preventiva e corretiva, data, responsável e status.
+---
 
-Listagem e Consulta: visualização rápida de todas as máquinas e seus respectivos históricos de manutenção.
+## 🛠️ **Funcionalidades Principais**
 
-Edição e Exclusão: atualização de dados e remoção de registros conforme necessário.
+- **Cadastro de Máquinas:**  
+  Inclusão de nome, categoria, número de série e demais informações relevantes.
 
-Interface Desenvolvida no FlutterFlow: telas intuitivas, responsivas e fáceis de usar, criadas através da plataforma low-code.
+- **Registro de Manutenção:**  
+  Detalhes de manutenção preventiva e corretiva, data, responsável e status.
 
-🧰 Tecnologias Utilizadas
+- **Listagem e Consulta:**  
+  Visualização rápida de todas as máquinas e seus históricos de manutenção.
 
-FlutterFlow – criação visual das telas e lógica do app
+- **Edição e Exclusão (CRUD Completo):**  
+  Atualização e remoção de registros sempre que necessário.
 
-Dbeaver - criação do Banco de Dados
+- **Interface desenvolvida no FlutterFlow:**  
+  Telas responsivas, intuitivas e fáceis de usar, criadas via plataforma low-code.
 
-Backend/Java – para armazenamento e manipulação dos dados 
+---
 
-📌 Estrutura do Projeto
+## 🧰 **Tecnologias Utilizadas**
 
-/ui – telas desenvolvidas no FlutterFlow
+- **FlutterFlow** – criação visual das telas e lógica do app  
+- **DBeaver** – modelagem e criação do Banco de Dados  
+- **Backend em Java** – manipulação dos dados e implementação do CRUD  
 
-/models – modelos de dados das máquinas e manutenções
+---
 
-/services – lógica de CRUD e integração com backend
+## 📁 **Estrutura do Projeto**
 
-/docs – documentação complementar
+/ui       → Telas desenvolvidas no FlutterFlow  
+/models   → Modelos das máquinas e manutenções  
+/services → Lógica de CRUD e integração com o backend  
+/docs     → Documentação complementar  
 
-📅 Status
 
-🚧 Em desenvolvimento – Construindo telas iniciais e implementando CRUD das máquinas.
+---
 
-👥 Equipe / Contribuidores
+## 📅 **Status do Projeto**
 
-Pedro Ryan batista
-Luis filipe Nunes
-Arthur Correia
-Arthur Mayworm
-Pedro Vogel
-Igor Farias
+⏳ **Em desenvolvimento** – Criando telas iniciais e implementando o CRUD das máquinas.
+
+---
+
+## 👥 **Equipe / Contribuidores**
+
+- **Pedro Ryan Batista**  
+- **Luis Filipe Nunes**  
+- **Arthur Correia**  
+- **Arthur Mayworm**  
+- **Pedro Vogel**  
+- **Igor Farias**
+
+---
+
+
