@@ -7,12 +7,6 @@ import java.util.List;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-    private final UsuarioService service;
-
-    public UsuarioController(UsuarioService service) {
-        this.service = service;
-    }
-
     @GetMapping
     public List<Usuario> findAll() {
         return service.findAll();
@@ -38,3 +32,4 @@ public class UsuarioController {
         service.delete(id);
     }
 }
+
