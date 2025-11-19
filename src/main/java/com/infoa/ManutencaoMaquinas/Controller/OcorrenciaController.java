@@ -7,12 +7,6 @@ import java.util.List;
 @RequestMapping("/ocorrencias")
 public class OcorrenciaController {
 
-    private final OcorrenciaService service;
-
-    public OcorrenciaController(OcorrenciaService service) {
-        this.service = service;
-    }
-
     @GetMapping
     public List<Ocorrencia> findAll() {
         return service.findAll();
@@ -38,3 +32,4 @@ public class OcorrenciaController {
         service.delete(id);
     }
 }
+
