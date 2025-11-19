@@ -8,12 +8,6 @@ import java.util.List;
 @RequestMapping("/maquinas")
 public class MaquinasController {
 
-    private final MaquinasService service;
-
-    public MaquinasController(MaquinasService service) {
-        this.service = service;
-    }
-
     @GetMapping
     public List<Maquinas> findAll() {
         return service.findAll();
@@ -39,3 +33,4 @@ public class MaquinasController {
         service.delete(id);
     }
 }
+
