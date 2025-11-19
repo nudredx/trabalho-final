@@ -1,37 +1,36 @@
 package com.infoa.ManutencaoMaquinas.Controller;
 
-
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/maquinas")
-public class MaquinasController {
+@RequestMapping("/usuarios")
+public class UsuarioController {
 
-    private final MaquinasService service;
+    private final UsuarioService service;
 
-    public MaquinasController(MaquinasService service) {
+    public UsuarioController(UsuarioService service) {
         this.service = service;
     }
 
     @GetMapping
-    public List<Maquinas> findAll() {
+    public List<Usuario> findAll() {
         return service.findAll();
     }
 
     @GetMapping("/{id}")
-    public Maquinas findById(@PathVariable Long id) {
+    public Usuario findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PostMapping
-    public Maquinas save(@RequestBody Maquinas maquinas) {
-        return service.save(maquinas);
+    public Usuario save(@RequestBody Usuario usuario) {
+        return service.save(usuario);
     }
 
     @PutMapping("/{id}")
-    public Maquinas update(@PathVariable Long id, @RequestBody Maquinas maquinas) {
-        return service.update(id, maquinas);
+    public Usuario update(@PathVariable Long id, @RequestBody Usuario usuario) {
+        return service.update(id, usuario);
     }
 
     @DeleteMapping("/{id}")

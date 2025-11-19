@@ -2,32 +2,20 @@ package com.infoa.ManutencaoMaquinas.Models;
 
 import java.time.LocalDate;
 
-public class Usuario {
+public class Tecnico {
 
-    private Long id;
     private String cpf;
     private String nome;
     private LocalDate dataNascimento;
-    private String email;
-    private String senha;
+    private String funcional;
 
-    public Usuario() {}
+    public Tecnico() {}
 
-    public Usuario(Long id, String cpf, String nome, LocalDate dataNascimento, String email, String senha) {
-        this.id = id;
+    public Tecnico(String cpf, String nome, LocalDate dataNascimento, String funcional) {
         this.cpf = cpf;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-        this.email = email;
-        this.senha = senha;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        this.funcional = funcional;
     }
 
     public String getCpf() {
@@ -54,19 +42,11 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFuncional() {
+        return funcional;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setFuncional(String funcional) {
+        this.funcional = funcional;
     }
 }
