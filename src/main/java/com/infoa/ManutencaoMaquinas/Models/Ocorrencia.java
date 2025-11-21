@@ -13,12 +13,20 @@ import jakarta.persistence.Table;
 @Table(name="ocorrencia")
 public class Ocorrencia {
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Column(name="id")
     private Integer id;
+
+     @Column(name="data")
     private LocalDate data;
+
+     @Column(name="gravidade")
     private String gravidade;
+
+     @Column(name="solucao")
     private String solucao;
+
+     @Column(name="tempopararesolucao")
     private int tempoParaResolucao;
 
     public Ocorrencia() {}

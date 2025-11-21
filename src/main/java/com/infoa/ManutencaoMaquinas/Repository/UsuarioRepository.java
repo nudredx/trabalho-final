@@ -8,8 +8,8 @@ import com.infoa.ManutencaoMaquinas.Models.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-    @Query(value="select * from usuario where id = :id", nativeQuery=true)
-    public Usuario findByEmail(Integer id);
-    
+    @Query(value="select * from usuario where email = :email", nativeQuery=true)
+    public Usuario findByEmail(String email);
+
 }
 

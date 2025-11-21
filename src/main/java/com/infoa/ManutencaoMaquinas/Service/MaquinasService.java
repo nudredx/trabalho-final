@@ -18,7 +18,7 @@ public class MaquinasService {
     }
 
     public Maquinas findById(Integer id) {
-        return maquinasRepository.findById(id).orElse(null);
+        return maquinasRepository.findById(id).get();
     }
 
     public Maquinas save(Maquinas maquinas) {

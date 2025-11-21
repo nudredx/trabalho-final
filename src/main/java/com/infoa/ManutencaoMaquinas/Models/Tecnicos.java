@@ -8,16 +8,26 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
 @Entity
 @Table(name="tecnicos")
 public class Tecnicos {
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name="id")
     private Integer id;
+
+     @Column(name="cpf")
     private String cpf;
+
+     @Column(name="nome")
     private String nome;
+
+     @Column(name="datanascimento")
     private LocalDate dataNascimento;
+
+     @Column(name="funcional")
     private String funcional;
 
     public Tecnicos() {}

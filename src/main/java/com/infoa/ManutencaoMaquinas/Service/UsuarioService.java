@@ -3,7 +3,6 @@ package com.infoa.ManutencaoMaquinas.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import com.infoa.ManutencaoMaquinas.Models.Usuario;
@@ -19,12 +18,12 @@ public class UsuarioService {
     public List<Usuario> findAll() {
         return usuarioRepository.findAll();
     }
-    @NonNull
+
     public Usuario buscarPorid(Integer id) {
         return usuarioRepository.findById(id).get();
 
     }
-    @NonNull
+    
     public Usuario save(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }

@@ -20,7 +20,7 @@ public class OcorrenciaService {
     }
 
     public Ocorrencia BuscarPorId(Integer id) {
-        return ocorrenciaRepository.findById(id).orElseThrow(()-> new RuntimeException("Não existe essa ocorrencia"));
+        return ocorrenciaRepository.findById(id).get();
     }
 
     @NonNull

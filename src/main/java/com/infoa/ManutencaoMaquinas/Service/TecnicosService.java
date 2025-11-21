@@ -1,9 +1,9 @@
 package com.infoa.ManutencaoMaquinas.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 import com.infoa.ManutencaoMaquinas.Models.Tecnicos;
 import com.infoa.ManutencaoMaquinas.Repository.TecnicosRepository;
@@ -19,7 +19,7 @@ public class TecnicosService {
     }
 
     public Tecnicos findById(Integer id) {
-        return tecnicosRepository.findById(id).orElse(null);
+        return tecnicosRepository.findById(id).get();
     }
 
     public Tecnicos save(Tecnicos tecnicos) {
