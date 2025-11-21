@@ -5,16 +5,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="maquinas")
 public class Maquinas {
 
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
+
+    @Column(name="modelo")
     private String modelo;
+    
+    @Column(name="categoria")
     private String categoria;
+    
+    @Column(name="funcionalidade")
     private String funcionalidade;
 
     public Maquinas() {}

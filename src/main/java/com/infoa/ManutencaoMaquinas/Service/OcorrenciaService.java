@@ -1,42 +1,39 @@
 package com.infoa.ManutencaoMaquinas.Service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import com.infoa.ManutencaoMaquinas.Models.Ocorrencia;
 import com.infoa.ManutencaoMaquinas.Repository.OcorrenciaRepository;
 
-import java.util.List;
-
-import org.springframework.lang.NonNull;
-
 @Service
 public class OcorrenciaService {
 
-    private final OcorrenciaRepository repository;
-
-    public OcorrenciaService(OcorrenciaRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    private OcorrenciaRepository ocorrenciaRepository;
 
     public List<Ocorrencia> findAll() {
-        return repository.findAll();
+        return ocorrenciaRepository.findAll();
     }
 
     public Ocorrencia BuscarPorId(Integer id) {
-        return repository.findById(id).orElseThrow(()-> new RuntimeException("Não existe essa ocorrencia"));
+        return ocorrenciaRepository.findById(id).orElseThrow(()-> new RuntimeException("Não existe essa ocorrencia"));
     }
 
     @NonNull
     public Ocorrencia save(Ocorrencia ocorrencia) {
-        return repository.save(ocorrencia);
+        return ocorrenciaRepository.save(ocorrencia);
     }
 
     public Ocorrencia update(Integer id, Ocorrencia ocorrencia) {
         ocorrencia.setId(id);
-        return repository.save(ocorrencia);
+        return ocorrenciaRepository.save(ocorrencia);
     }
 
     public void delete(Integer id) {
-        repository.deleteById(id);
+        ocorrenciaRepository.deleteById(id);
     }
 }

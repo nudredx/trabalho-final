@@ -1,6 +1,7 @@
 package com.infoa.ManutencaoMaquinas.Service;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.infoa.ManutencaoMaquinas.Models.Maquinas;
@@ -9,30 +10,27 @@ import com.infoa.ManutencaoMaquinas.Repository.MaquinasRepository;
 @Service
 public class MaquinasService {
 
-    private final MaquinasRepository repository;
-
-    public MaquinasService(MaquinasRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    private MaquinasRepository maquinasRepository;
 
     public List<Maquinas> findAll() {
-        return repository.findAll();
+        return maquinasRepository.findAll();
     }
 
     public Maquinas findById(Integer id) {
-        return repository.findById(id).orElse(null);
+        return maquinasRepository.findById(id).orElse(null);
     }
 
     public Maquinas save(Maquinas maquinas) {
-        return repository.save(maquinas);
+        return maquinasRepository.save(maquinas);
     }
 
     public Maquinas update(Integer id, Maquinas maquinas) {
         maquinas.setId(id);
-        return repository.save(maquinas);
+        return maquinasRepository.save(maquinas);
     }
 
     public void delete(Integer id) {
-        repository.deleteById(id);
+        maquinasRepository.deleteById(id);
     }
 }

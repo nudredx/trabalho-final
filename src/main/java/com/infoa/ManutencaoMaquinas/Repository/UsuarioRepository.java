@@ -1,11 +1,15 @@
 package com.infoa.ManutencaoMaquinas.Repository;
  
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.infoa.ManutencaoMaquinas.Models.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-    Usuario buscarPorid(Integer id);
+
+    @Query(value="select * from usuario where id = :id", nativeQuery=true)
+    public Usuario findByEmail(Integer id);
+    
 }
 
