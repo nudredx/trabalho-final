@@ -22,27 +22,27 @@ public class MaquinasController {
     @Autowired
     private MaquinasService service;
 
-    @GetMapping
+    @GetMapping("/lista-todos")
     public List<Maquinas> findAll() {
         return service.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/buscar/{id}")
     public Maquinas findById(@PathVariable Integer id) {
         return service.findById(id);
     }
 
-    @PostMapping
+    @PostMapping("/cadastrar")
     public Maquinas save(@RequestBody Maquinas maquinas) {
         return service.save(maquinas);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/atualizar/{id}")
     public Maquinas update(@PathVariable Integer id, @RequestBody Maquinas maquinas) {
         return service.update(id, maquinas);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/deletar/{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
     }
