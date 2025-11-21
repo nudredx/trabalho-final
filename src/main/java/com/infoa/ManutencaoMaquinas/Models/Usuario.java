@@ -2,9 +2,16 @@ package com.infoa.ManutencaoMaquinas.Models;
 
 import java.time.LocalDate;
 
-public class Usuario {
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    private Long id;
+public class Usuario {
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String cpf;
     private String nome;
     private LocalDate dataNascimento;
@@ -13,7 +20,7 @@ public class Usuario {
 
     public Usuario() {}
 
-    public Usuario(Long id, String cpf, String nome, LocalDate dataNascimento, String email, String senha) {
+    public Usuario(Integer id, String cpf, String nome, LocalDate dataNascimento, String email, String senha) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;
@@ -22,11 +29,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

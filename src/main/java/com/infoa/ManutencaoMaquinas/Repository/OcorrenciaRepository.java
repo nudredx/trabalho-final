@@ -1,6 +1,8 @@
 package com.infoa.ManutencaoMaquinas.Repository;
-
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OcorrenciaRepository extends JpaRepository<Ocorrencia, Long> {
+import com.infoa.ManutencaoMaquinas.Models.Ocorrencia;
+@Repository
+public interface OcorrenciaRepository extends JpaRepository <Ocorrencia, Integer> {
 }

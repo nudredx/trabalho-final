@@ -1,11 +1,19 @@
 package com.infoa.ManutencaoMaquinas.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.infoa.ManutencaoMaquinas.Models.Usuario;
+import com.infoa.ManutencaoMaquinas.Service.UsuarioService;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
+
+    @Autowired
+    private UsuarioService service;
 
     @GetMapping
     public List<Usuario> findAll() {
@@ -13,8 +21,8 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public Usuario findById(@PathVariable Long id) {
-        return service.findById(id);
+    public Usuario buscarPorid(@PathVariable Integer id) {
+        return (Usuario) service.buscarPorid(id);
     }
 
     @PostMapping
@@ -23,13 +31,12 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public Usuario update(@PathVariable Long id, @RequestBody Usuario usuario) {
+    public Usuario update(@PathVariable Integer id, @RequestBody Usuario usuario) {
         return service.update(id, usuario);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable Integer id) {
         service.delete(id);
     }
 }
-

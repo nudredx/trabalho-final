@@ -2,8 +2,16 @@ package com.infoa.ManutencaoMaquinas.Models;
 
 import java.time.LocalDate;
 
-public class Ocorrencia {
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+public class Ocorrencia {
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Integer id;
     private LocalDate data;
     private String gravidade;
     private String solucao;
@@ -11,11 +19,12 @@ public class Ocorrencia {
 
     public Ocorrencia() {}
 
-    public Ocorrencia(LocalDate data, String gravidade, String solucao, int tempoParaResolucao) {
+    public Ocorrencia(LocalDate data, String gravidade, String solucao, int tempoParaResolucao, Integer id) {
         this.data = data;
         this.gravidade = gravidade;
         this.solucao = solucao;
         this.tempoParaResolucao = tempoParaResolucao;
+        this.id = id;
     }
 
     public LocalDate getData() {
@@ -49,4 +58,13 @@ public class Ocorrencia {
     public void setTempoParaResolucao(int tempoParaResolucao) {
         this.tempoParaResolucao = tempoParaResolucao;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
 }

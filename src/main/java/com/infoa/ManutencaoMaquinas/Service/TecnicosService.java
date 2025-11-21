@@ -1,31 +1,37 @@
 package com.infoa.ManutencaoMaquinas.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
+
+import com.infoa.ManutencaoMaquinas.Models.Tecnicos;
+import com.infoa.ManutencaoMaquinas.Repository.TecnicosRepository;
 
 @Service
 public class TecnicosService {
 
-    private final TecnicosRepository repository;
+    @Autowired
+    private TecnicosRepository tecnicosRepository;
 
-    public TecnicosService(TecnicosRepository repository) {
-        this.repository = repository;
+    public List<Tecnicos> findAll() {
+        return tecnicosRepository.findAll();
     }
 
-    public List<Tecnicos> findAll() { return repository.findAll(); }
-
-    public Tecnicos findById(Long id) {
-        return repository.findById(id).orElse(null);
+    public Tecnicos findById(Integer id) {
+        return tecnicosRepository.findById(id).orElse(null);
     }
 
     public Tecnicos save(Tecnicos tecnicos) {
-        return repository.save(tecnicos);
+        return tecnicosRepository.save(tecnicos);
     }
 
-    public Tecnicos update(Long id, Tecnicos tecnicos) {
+    public Tecnicos update(Integer id, Tecnicos tecnicos) {
         tecnicos.setId(id);
-        return repository.save(tecnicos);
+        return tecnicosRepository.save(tecnicos);
     }
 
-    public void delete(Long id) { repository.deleteById(id); }
+    public void delete(Integer id) {
+        tecnicosRepository.deleteById(id);
+    }
 }

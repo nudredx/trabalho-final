@@ -1,7 +1,11 @@
 package com.infoa.ManutencaoMaquinas.Repository;
  
-
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+import com.infoa.ManutencaoMaquinas.Models.Usuario;
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+    Usuario buscarPorid(Integer id);
 }
+
