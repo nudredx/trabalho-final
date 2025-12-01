@@ -64,4 +64,5 @@ Criar uma aplicação que permita **registrar, visualizar e gerenciar** as manut
 ## **LINKS:**
 CANVA: https://www.canva.com/design/DAG6NTDLpOE/ofmI5NCGIPkAuJE_v2g6Og/edit?utm_content=DAG6NTDLpOE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 DOCUMENTAÇÃO: https://docs.google.com/document/d/1Xtt-9E_ATWG8Gn-mLmwcBhpMnmVokP_y1YnsntSKPyE/edit?usp=sharing
-FLUTTELFLOW:
+FLUTTELFLOW: https://app.flutterflow.io/project/integracao-app-lic9hv
+DEPLOY: https://manutencaomaquinas.onrender.com/manutencaomaquinas/swagger-ui/index.html
